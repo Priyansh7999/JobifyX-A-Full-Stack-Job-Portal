@@ -4,14 +4,14 @@ import { Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   return (
-    <div>
+    <>
       <div className="grid-background"></div>
       <main className="min-h-screen container mx-auto px-4 py-8">
         <Header />
         <Outlet />
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 
