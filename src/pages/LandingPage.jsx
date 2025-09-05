@@ -1,4 +1,4 @@
-// landing page with ShadCN and Aceternity UI components
+// landing page with hero section, companies carousel, features section, cards section, and FAQ section
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
