@@ -1,3 +1,4 @@
+// configure Supabase and Clerk authentication 
 
 import { createClient } from '@supabase/supabase-js';
 
