@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
+// add dark mode support using ShadCN theme provider
 import { createContext, useContext, useEffect, useState } from "react";
 
 const initialState = {
   theme: "system",
   setTheme: () => null,
 };
-
 const ThemeProviderContext = createContext(initialState);
 
 export function ThemeProvider({
