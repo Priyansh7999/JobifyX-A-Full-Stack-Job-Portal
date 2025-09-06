@@ -5,6 +5,9 @@ import { Heart, MapPinIcon, Trash2Icon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 
+// job card component to show job details
+// props: job, isMyJob, savesInit, onJobSaved
+// job: object containing job details
 export default function JobCard({
     job, isMyJob = false, savesInit = false, onJobSaved = () => { }
 }) {
