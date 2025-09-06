@@ -3,6 +3,7 @@ import { useUser } from '@clerk/clerk-react'
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { BarLoader } from 'react-spinners'
+// onboarding page to select role (candidate or recruiter)
 export default function Onboarding() {
   const { user, isLoaded } = useUser();
   const navigate = useNavigate();
