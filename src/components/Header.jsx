@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { Button } from './ui/button'
-import { SignedIn, SignedOut, SignIn, SignInButton, UserButton } from '@clerk/clerk-react'
+import { SignedIn, SignedOut, SignIn, SignInButton, UserButton, useUser } from '@clerk/clerk-react'
 import { BriefcaseBusiness, BriefcaseBusinessIcon, Heart, PenBox } from 'lucide-react'
 
 const Header = () => {
     const [showSignIn, setShowSignIn] = useState(false);
+    const { user } = useUser();
 
     // to get the search params from the url
-    const [Search,setSearch] = useSearchParams();
+    const [Search, setSearch] = useSearchParams();
     // if the url contains ?signIn=true then show the sign in form
     useEffect(() => {
         if (Search.get("signIn") === "true") {
@@ -29,7 +30,7 @@ const Header = () => {
                 <Link to="/">
                     <img src="/logo2.png" alt="Logo" className="h-20" />
                 </Link>
-                <div>
+                <div className='flex items-center gap-4'>
                     {/* if user is not signed in */}
                     <SignedOut>
                         <Button variant={"outline"} onClick={() => setShowSignIn(true)}>Login</Button>
@@ -38,12 +39,17 @@ const Header = () => {
                     {/* if user is signed in */}
                     <SignedIn>
                         {/* post a job only seen by recruiters */}
-                        <Link to="/post-job">
-                            <Button variant="destructive" className='rounded-full'>
-                                <PenBox size={20} className='mr-2' />
-                                Post a Job
-                            </Button>
-                        </Link>
+                        {
+                            user?.unsafeMetadata?.role === 'recruiter' && (
+                                <Link to="/post-job">
+                                    <Button variant="destructive" className='rounded-full'>
+                                        <PenBox size={20} className='mr-2' />
+                                        Post a Job
+                                    </Button>
+                                </Link>
+                            )
+                        }
+
 
                         {/* user menu */}
                         <UserButton>
@@ -58,15 +64,15 @@ const Header = () => {
                                     labelIcon={<Heart size={16} />}
                                     href='/saved-jobs'
                                 />
-                            </UserButton.MenuItems>                       
-                            
+                            </UserButton.MenuItems>
+
                         </UserButton>
                     </SignedIn>
                 </div>
             </nav>
             {showSignIn && (
                 <div
-                    className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+                    className="fixed z-10 inset-0 flex items-center justify-center bg-black bg-opacity-75"
                     // function to close when clicked outside the sign in form
                     onClick={handleOverlayClick}
                 >
