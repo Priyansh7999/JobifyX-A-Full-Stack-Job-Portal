@@ -1,4 +1,4 @@
-# JobifyX - Full Stack Job Portal - Hired with React JS, Tailwind CSS, Supabase, Clerk, Shadcn UI 
+# JobifyX - Full Stack Job Portal - Build with React JS, Tailwind CSS, Supabase, Clerk, Shadcn UI 
 
 This project is a **Full Stack Job Portal App** named "JobifyX," which demonstrates the key skills that companies look for today. It features **authentication, job postings, applications, profile management**, and more. The app provides both **candidate** and **recruiter** functionality, offering a comprehensive platform for job seekers and employers alike.
 
