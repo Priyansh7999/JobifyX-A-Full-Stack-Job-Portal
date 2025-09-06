@@ -1,7 +1,6 @@
 import { useSession } from "@clerk/clerk-react";
 import { useState } from "react";
-// this hook takes a callback function and options as parameters
-// it returns data, loading, error and a function to call the callback
+// this hook takes a callback function and options as parameters and returns data, loading, error and a function to call the callback
 // use of this hook is to fetch data from an api with authentication token from clerk
 // the callback function should be an async function that takes the token and options as parameters
 // the options are optional and can be used to pass additional parameters to the callback function
