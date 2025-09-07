@@ -11,3 +11,5 @@ export async function getCompanies(token) {
     }
     return data;
 }
+
+

@@ -28,7 +28,7 @@ export default function Onboarding() {
 
   return (
     <div className='flex flex-col justify-center items-center mt-40'>
-      <h2 className='gradient-titke font-extrabold text-7xl sm:text-8xl  tracking-tighter'>
+      <h2 className='gradient-titke font-extrabold text-7xl sm:text-8xl tracking-tighter'>
         I am a ...
       </h2>
       <div className='mt-16 grid grid-cols-2 gap-4 w-full md:px-40'>

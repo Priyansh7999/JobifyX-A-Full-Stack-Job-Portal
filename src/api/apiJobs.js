@@ -1,24 +1,24 @@
 import supabaseClient from "@/utils/supabase";
 // Fetch Jobs
 export async function getJobs(token, { location, company_id, searchQuery }) {
-    const supabase = await supabaseClient(token);
-    let query = supabase.from('jobs').select('*, company:companies(name,logo_url),saved: saved_jobs(id)');
-    if (location) {
-        query = query.ilike("location", `%${location}%`);
-    }
-    if (company_id) {
-        query = query.eq('company_id', company_id);
-    }
-    if (searchQuery) {
-        query = query.ilike("title", `%${searchQuery}%`);
-    }
+  const supabase = await supabaseClient(token);
+  let query = supabase.from('jobs').select('*, company:companies(name,logo_url),saved: saved_jobs(id)');
+  if (location) {
+    query = query.ilike("location", `%${location}%`);
+  }
+  if (company_id) {
+    query = query.eq('company_id', company_id);
+  }
+  if (searchQuery) {
+    query = query.ilike("title", `%${searchQuery}%`);
+  }
 
-    const { data, error } = await query;
-    if (error) {
-        console.error("Error Fetching Jobs:", error);
-        return null;
-    }
-    return data;
+  const { data, error } = await query;
+  if (error) {
+    console.error("Error Fetching Jobs:", error);
+    return null;
+  }
+  return data;
 }
 
 // - Add or Remove Saved Job
@@ -52,4 +52,33 @@ export async function saveJob(token, { alreadySaved }, saveData) {
 
     return data;
   }
+}
+
+export async function getSingleJob(token, { job_id }) {
+  const supabase = await supabaseClient(token);
+  const { data, error: error } = await supabase
+    .from("jobs")
+    .select("*, company: companies(name,logo_url), applications: applications(*)")
+    .eq("id", job_id)
+    .single();
+  if (error) {
+    console.error("Error Fetching Single Job:", error);
+    return null;
+  }
+  return data;
+}
+
+
+export async function updateHiringStatus(token, { job_id }, isOpen) {
+  const supabase = await supabaseClient(token);
+  const { data, error: error } = await supabase
+    .from("jobs")
+    .update({ isOpen }) //isOpen:isOpen
+    .eq("id", job_id)
+    .select()
+  if (error) {
+    console.error("Error Fetching Single Job:", error);
+    return null;
+  }
+  return data;
 }

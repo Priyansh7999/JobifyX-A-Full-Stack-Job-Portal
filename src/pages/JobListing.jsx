@@ -88,7 +88,9 @@ export default function JobListing() {
             <SelectGroup>
               {
                 companies?.map((company) => (
-                  <SelectItem key={company.id} value={company.id}>{company.name}</SelectItem>
+                  <SelectItem key={company.id} value={company.id}>
+                   <img src={company.logo_url} alt={company.name} className='w-6 h-6 mr-2 object-contain' /> {company.name}
+                  </SelectItem>
                 ))
               }
             </SelectGroup>
