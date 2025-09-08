@@ -9,6 +9,7 @@ import { useParams } from 'react-router-dom';
 import { BarLoader } from 'react-spinners';
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
 import ApplyJobDrawer from '@/components/ApplyJob';
+import ApplicationCard from '@/components/ApplicationCard';
 
 export default function JobPage() {
   const { isLoaded, user } = useUser();
@@ -100,6 +101,18 @@ export default function JobPage() {
           fetchJob={fnJob}
           applied={job?.applications?.find((ap) => ap.candidate_id === user.id)}
         />
+      }
+      {
+        job?.applications?.length>0 && job?.recruiter_id === user?.id && (
+          <div className='flex flex-col gap-3'>
+            <h2 className='text-2xl sm:text-3xl font-bold'>Applications</h2>
+            {
+              job?.applications.map((application)=>{
+                return <ApplicationCard key={application.id} application={application} />
+              })
+            }
+          </div>
+        )
       }
     </div>
   )

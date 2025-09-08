@@ -28,7 +28,7 @@ const Header = () => {
         <>
             <nav className='py-4 flex justify-between items-center'>
                 <Link to="/">
-                    <img src="/logo2.png" alt="Logo" className="h-20" />
+                    <img src="/logo.png" alt="Logo" className="h-20" />
                 </Link>
                 <div className='flex items-center gap-4'>
                     {/* if user is not signed in */}
