@@ -93,7 +93,7 @@ export default function JobPage() {
       <p className='text-2xl sm:text-3xl font-bold'>What we are looking for</p>
       <MDEditor.Markdown source={job?.requirements} className='bg-transparent sm:text-lg' />
 
-      {/* render application */}
+      {/* render applications for recruiter */}
       {
         job?.recruiter_id != user?.id && <ApplyJobDrawer
           job={job}

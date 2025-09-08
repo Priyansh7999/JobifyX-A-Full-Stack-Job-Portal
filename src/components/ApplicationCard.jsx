@@ -38,6 +38,7 @@ const ApplicationCard = ({ application, isCandidate = false }) => {
   };
 
   return (
+    // Application Card for candidates as well as recruiters
     <Card>
       {loadingHiringStatus && <BarLoader width={"100%"} color="#36d7b7" />}
       <CardHeader>
