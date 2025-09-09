@@ -36,6 +36,7 @@ const ApplicationCard = ({ application, isCandidate = false }) => {
   const handleStatusChange = (status) => {
     fnHiringStatus(status).then(() => fnHiringStatus());
   };
+  
 
   return (
     // Application Card for candidates as well as recruiters
