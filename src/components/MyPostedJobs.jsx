@@ -23,15 +23,12 @@ function MyPostedJobs() {
             {myJobs?.length ? (
                 myJobs.map((job) => {
                     return (
-                        <>
                             <JobCard
                                 key={job.id}
                                 isMyJob
                                 job={job}
                                 onJobAction={fnMyJobs}
                             />
-                        </>
-
                     );
                 })
             ) : (
