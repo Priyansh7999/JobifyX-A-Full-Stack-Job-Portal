@@ -28,6 +28,7 @@ const schema = z.object({
       }
     ),
 });
+
 function AddCompany({ fetchCompanies }) {
     const {
     register,
@@ -82,7 +83,7 @@ function AddCompany({ fetchCompanies }) {
                     />
                     <Button
                         type="submit"
-                        className="w-full"
+                        className="w-full font-bold"
                         variant={"destructive"}
                     >
                         Add
