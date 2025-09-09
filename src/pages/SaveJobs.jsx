@@ -27,15 +27,12 @@ export default function SaveJobs() {
           {savedJobs?.length ? (
             savedJobs.map((saved) => {
               return (
-                <>
                   <JobCard
                     key={saved.id}
                     job={saved?.job}
                     savedInit={true}
                     onJobSaved={() => fnSavedJobs()}
                   />
-                </>
-
               );
             })
           ) : (
