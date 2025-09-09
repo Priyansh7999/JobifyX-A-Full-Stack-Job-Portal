@@ -21,7 +21,7 @@ function MyApplications() {
     if (!isLoaded || loadingApplications) return <BarLoader width={"100%"} color='#36d7b7' />
 
     return (
-        <div className='flex flex-col gap-2'>
+        <div className='flex flex-col gap-3'>
             {
               applications?.map((application)=>{
                 return <ApplicationCard key={application.id} application={application} isCandidate/>
