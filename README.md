@@ -9,6 +9,15 @@ This project is a **Full Stack Job Portal App** named "JobifyX," which demonstra
 
 ![JobifyX Logo](./public/banner.jpeg)
 
+
+## Technologies Used:
+- **Frontend**: ReactJS, ShadCN UI
+- **State Management**: React Hook Form, Zod
+- **Authentication**: Clerk
+- **Cloud Storage**: Storage Buckets for resume uploads
+- **Markdown**: For rich text job descriptions
+
+
 ## Key Features:
 - **Authentication**: Users can sign in using **Google** or **email and password** authentication powered by **Clerk**.
 - **Responsive UI**: The user interface is fully responsive, built with **ReactJS** and **ShadCN UI**, ensuring a modern and professional look on all devices.
@@ -22,13 +31,6 @@ This project is a **Full Stack Job Portal App** named "JobifyX," which demonstra
 - **Profile Management**: Users can view and manage their **profile, saved jobs, applied jobs**, and account details.
 - **State Management**: React state management and form handling are done via **React Hook Form** and **Zod Validation**.
 - **Real-Time Status Updates**: Recruiters can update the status of applications (e.g., "interviewing"), and candidates will see these updates on their profile.
-
-## Technologies Used:
-- **Frontend**: ReactJS, ShadCN UI
-- **State Management**: React Hook Form, Zod
-- **Authentication**: Clerk
-- **Cloud Storage**: Storage Buckets for resume uploads
-- **Markdown**: For rich text job descriptions
 
 ## Application Flow:
 ### 1. Candidates:
