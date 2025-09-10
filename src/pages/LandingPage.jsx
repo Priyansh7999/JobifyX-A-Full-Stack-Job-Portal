@@ -25,11 +25,11 @@ export default function LandingPage() {
       <section className='text-center'>
         <h1 className='flex flex-col items-center justify-center gradient-title text-4xl font-extrabold sm:text-6xl lg:text-8xl tracking-tight py-4'>
           Find Your Dream Job
-          <span className='flex items-center gap-2 sm:gap-6'>and get
+          <span className='flex items-center gap-2 sm:gap-6'>With
             <img
               src='/logo.png'
               alt='logo'
-              className='h-14 sm:h-24 lg:h-32' />
+              className='h-20 sm:h-32 lg:h-40 pt-3' />
           </span>
         </h1>
         <p className='text-gray-300 sm:mt-4 text-xs sm:text-xl'>
@@ -74,56 +74,61 @@ export default function LandingPage() {
       {/* FEATURES */}
       <section>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+
+          {/* Main Feature Card */}
           <WobbleCard
             containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
             className=""
           >
             <div className="max-w-xs">
               <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-                Gippity AI powers the entire universe
+                Empowering Careers with JobifyX
               </h2>
-              <p className="mt-4 text-left  text-base/6 text-neutral-200">
-                With over 100,000 mothly active bot users, Gippity AI is the most
-                popular AI platform for developers.
+              <p className="mt-4 text-left text-base/6 text-neutral-200">
+                Explore job opportunities, upload your resume, and track applications in real-time — all in one intuitive platform for job seekers and recruiters.
               </p>
             </div>
             <img
               src="/logo.png"
-              width={550}
+              width={500}
               height={500}
-              alt="linear demo image"
-              className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+              alt="JobifyX logo"
+              className="absolute -right-4 lg:-right-[2%] grayscale filter -bottom-10 object-contain rounded-2xl"
             />
           </WobbleCard>
-          <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-            <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-              No shirt, no shoes, no weapons.
+
+          {/* Quick Feature or CTA Card */}
+          <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-gray-900">
+            <h2 className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+              For Recruiters and Candidates
             </h2>
-            <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-              If someone yells “stop!”, goes limp, or taps out, the fight is over.
+            <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
+              Whether you're hiring or job hunting, JobifyX makes the process fast, transparent, and hassle-free.
             </p>
           </WobbleCard>
+
+          {/* Call to Action or Promo Card */}
           <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
             <div className="max-w-sm">
-              <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-                Signup for blazing-fast cutting-edge state of the art Gippity AI
-                wrapper today!
+              <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+                Join JobifyX Today and Transform Your Career
               </h2>
-              <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-                With over 100,000 mothly active bot users, Gippity AI is the most
-                popular AI platform for developers.
+              <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
+                Sign up now to access powerful tools for job applications, real-time status tracking, resume uploads, and more.
               </p>
             </div>
             <img
               src="/banner.jpeg"
-              width={650}
+              width={500}
               height={500}
-              alt="linear demo image"
-              className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
+              alt="JobifyX banner"
+              className="absolute -right-1 md:-right-[5%] lg:-right-[5%] -bottom-10 object-contain rounded-2xl"
             />
           </WobbleCard>
+
         </div>
       </section>
+
 
       {/* CARDS */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-4">

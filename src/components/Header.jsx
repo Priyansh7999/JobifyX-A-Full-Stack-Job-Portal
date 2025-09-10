@@ -72,7 +72,7 @@ const Header = () => {
             </nav>
             {showSignIn && (
                 <div
-                    className="fixed z-10 inset-0 flex items-center justify-center bg-black bg-opacity-75"
+                    className="fixed z-10 inset-0 flex items-center justify-center bg-black/60"
                     // function to close when clicked outside the sign in form
                     onClick={handleOverlayClick}
                 >
