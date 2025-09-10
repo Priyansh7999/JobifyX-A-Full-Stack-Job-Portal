@@ -1,6 +1,13 @@
-# JobifyX - Full Stack Job Portal - Build with React JS, Tailwind CSS, Supabase, Clerk, Shadcn UI 
+<p align="center">
+  <img src="public/logo.png" alt="JobifyX Logo" width="450" height="200" />
+  <br />
+  <strong style="font-size:2em;">Full Stack Job Portal</strong>
+</p>
+<hr />
 
 This project is a **Full Stack Job Portal App** named "JobifyX," which demonstrates the key skills that companies look for today. It features **authentication, job postings, applications, profile management**, and more. The app provides both **candidate** and **recruiter** functionality, offering a comprehensive platform for job seekers and employers alike.
+
+![JobifyX Logo](./public/banner.jpeg)
 
 ## Key Features:
 - **Authentication**: Users can sign in using **Google** or **email and password** authentication powered by **Clerk**.
@@ -54,5 +61,5 @@ VITE_CLERK_PUBLISHABLE_KEY=
 
 3. Start the development server:
    ```bash
-   npm start
+   npm run dev
 4. Open the app in your browser at [http://localhost:3000](http://localhost:3000).
