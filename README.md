@@ -1,10 +1,5 @@
-<p align="center">
-  <img src="public/logo.png" alt="JobifyX Logo" width="450" height="200" />
-  <br />
-  <strong style="font-size:2em;">Full Stack Job Portal</strong>
-</p>
-<hr />
-
+![AI Recruiter Homepage](public/logo.png)
+# Full Stack Job Portal
 This project is a **Full Stack Job Portal App** named "JobifyX," which demonstrates the key skills that companies look for today. It features **authentication, job postings, applications, profile management**, and more. The app provides both **candidate** and **recruiter** functionality, offering a comprehensive platform for job seekers and employers alike.
 
 ![JobifyX Logo](./public/banner.jpeg)
